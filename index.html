@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora de Subsídios e Contribuições</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="ARODAN BLACK.jpg" type="image/x-icon">
+    
+</head>
+<body>
+        <div class="nav">
+            <div class="lOGO">
+                <a href="#">AURODAN PRESTAÇÃO DE SERVIÇOS</a>
+                
+                
+
+            </div>
+
+
+        </div>
+    <div class="container">
+        <h1>Calculadora de INSS e IRT</h1>
+        <form id="calculator-form">
+            <label for="valor-bruto">Valor Bruto:</label>
+            <input type="text" id="valor-bruto" required onblur="formatInput(this)">
+
+            <label for="subs-transporte">Subsídios de Transporte:</label>
+            <input type="text" id="subs-transporte" required onblur="formatInput(this)">
+
+            <label for="subs-alimentacao">Subsídios de Alimentação:</label>
+            <input type="text" id="subs-alimentacao" required onblur="formatInput(this)">
+
+            <label for="seg-social">Segurança Social (3%):</label>
+            <input type="text" id="seg-social" readonly>
+
+            
+
+            <label for="valor-liquido">Valor Líquido:</label>
+            <input type="text" id="valor-liquido" readonly>
+
+            <label for="calculo-irt">Cálculo do IRT:</label>
+            <input type="text" id="calculo-irt" readonly>
+
+            <button type="button" onclick="calcular()">Calcular</button>
+            <button type="reset" onclick="limparFormulario()">Limpar Dados</button>
+        </form>
+        <div id="valores-calculados">
+            <h2>Valores Calculados:</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Descrição</th>
+                        <th>Valor</th>
+                    </tr>
+                </thead>
+                <tbody id="resultados-tabela">
+                    <tr>
+                        <td>V /Bruto</td>
+                        <td><input type="text" id="res-valor-bruto" readonly></td>
+                    </tr>
+                    <tr>
+                        <td>Sub/Transp</td>
+                        <td><input type="text" id="res-subs-transporte" readonly></td>
+                    </tr>
+                    <tr>
+                        <td>Sub/Alim</td>
+                        <td><input type="text" id="res-subs-alimentacao" readonly></td>
+                    </tr>
+                    <tr>
+                        <td>INSS</td>
+                        <td><input type="text" id="res-seg-social" readonly></td>
+                    </tr>
+                    <tr>
+                        <td>V/Líquido</td>
+                        <td><input type="text" id="res-valor-liquido" readonly></td>
+                    </tr>
+                    <tr>
+                        <td>IRT</td>
+                        <td><input type="text" id="res-calculo-irt" readonly></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+   
+    <!-- Conteúdo da página -->
+
+    <footer class="footer">
+        <div class="footer-line"></div>
+        <p>Criado por Igor 2024 &copy; Programa Criado Para O calculo rapiro do IRT </p>
+        <p>aurodan.ps@gmail.com</p>
+        <p> Contactos: +244 923 626 315</p>
+
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
